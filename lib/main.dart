@@ -38,6 +38,11 @@ class HomePage extends State<CounterLikeState> {
 
   @override
   Widget build(BuildContext context) {
+    var c;
+    Color changeColor(){
+      return Colors.blue;
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text('App ITESO'),
@@ -92,12 +97,14 @@ class HomePage extends State<CounterLikeState> {
               Column(
                 children: [
                   IconButton(onPressed: (){
+                      print("x");
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: const Text('Enviar correo'),
                         ),
                       );
-                  }, icon: Icon(Icons.mail, size: 64),)
+                  }, icon: Icon(Icons.mail), iconSize: 64),
+                  Text('Correo')
                 ],
               ),
               Column(
@@ -105,24 +112,30 @@ class HomePage extends State<CounterLikeState> {
                   IconButton(onPressed: (){
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: const Text('Enviar correo'),
+                          content: const Text('Hacer llamada'),
                         ),
                       );
-                  }, icon: Icon(Icons.mail, size: 64),)
+                  }, icon: Icon(Icons.call), iconSize: 64),
+                  Text('Llamada')
                 ],
               ),
               Column(
                 children: [
                   IconButton(onPressed: (){
+                      // c = changeColor();
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: const Text('Enviar correo'),
+                          content: const Text('Ir al ITESO'),
                         ),
                       );
-                  }, icon: Icon(Icons.mail, size: 64),)
+                  }, icon: Icon(Icons.directions), iconSize: 64),
+                  Text('Ruta')
                 ],
-              )
+              ),
             ],
+          ),
+          Container(
+            height: 20,
           ),
           Container(
             height: 35,
