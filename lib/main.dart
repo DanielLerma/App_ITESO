@@ -42,7 +42,7 @@ class HomePage extends State<CounterLikeState> {
 
   void changeColor1(){
     setState((){
-      if(c1 == Colors.blue){
+      if(c1 == Colors.indigo){
         c1 = Colors.black;
       }
       else{
@@ -53,7 +53,7 @@ class HomePage extends State<CounterLikeState> {
 
   void changeColor2(){
     setState((){
-      if(c2 == Colors.blue){
+      if(c2 == Colors.indigo){
         c2 = Colors.black;
       }
       else{
@@ -64,7 +64,7 @@ class HomePage extends State<CounterLikeState> {
 
   void changeColor3(){
     setState((){
-      if(c3 == Colors.blue){
+      if(c3 == Colors.indigo){
         c3 = Colors.black;
       }
       else{
@@ -167,9 +167,6 @@ class HomePage extends State<CounterLikeState> {
                 ],
               ),
             ],
-          ),
-          Container(
-            height: 20,
           ),
           Container(
             height: 35,
