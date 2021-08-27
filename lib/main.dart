@@ -13,14 +13,15 @@ class MyAppIteso extends StatelessWidget {
 }
 
 class CounterLikeState extends StatefulWidget {
+  CounterLikeState({
+    Key? key,
+  }) : super(key: key);
+
   @override
   HomePage createState() => HomePage();
 }
 
 class HomePage extends State<CounterLikeState> {
-  // const HomePage({
-  //   Key? key,
-  // }) : super(key: key);
 
   int count = 0;
   Color c1 = Colors.black;
