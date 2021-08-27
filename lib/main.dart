@@ -46,7 +46,7 @@ class HomePage extends State<CounterLikeState> {
         c1 = Colors.black;
       }
       else{
-        c1 = Colors.blue;
+        c1 = Colors.indigo;
       }
     });
   }
@@ -57,7 +57,7 @@ class HomePage extends State<CounterLikeState> {
         c2 = Colors.black;
       }
       else{
-        c2 = Colors.blue;
+        c2 = Colors.indigo;
       }
     });
   }
@@ -68,7 +68,7 @@ class HomePage extends State<CounterLikeState> {
         c3 = Colors.black;
       }
       else{
-        c3 = Colors.blue;
+        c3 = Colors.indigo;
       }
     });
   }
