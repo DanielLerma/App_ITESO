@@ -23,6 +23,9 @@ class HomePage extends State<CounterLikeState> {
   // }) : super(key: key);
 
   int count = 0;
+  Color c1 = Colors.black;
+  Color c2 = Colors.black;
+  Color c3 = Colors.black;
 
   void incrementCount(){
     setState((){
@@ -36,12 +39,41 @@ class HomePage extends State<CounterLikeState> {
     });
   }
 
+  void changeColor1(){
+    setState((){
+      if(c1 == Colors.blue){
+        c1 = Colors.black;
+      }
+      else{
+        c1 = Colors.blue;
+      }
+    });
+  }
+
+  void changeColor2(){
+    setState((){
+      if(c2 == Colors.blue){
+        c2 = Colors.black;
+      }
+      else{
+        c2 = Colors.blue;
+      }
+    });
+  }
+
+  void changeColor3(){
+    setState((){
+      if(c3 == Colors.blue){
+        c3 = Colors.black;
+      }
+      else{
+        c3 = Colors.blue;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    var c;
-    Color changeColor(){
-      return Colors.blue;
-    }
 
     return Scaffold(
       appBar: AppBar(
@@ -97,38 +129,39 @@ class HomePage extends State<CounterLikeState> {
               Column(
                 children: [
                   IconButton(onPressed: (){
-                      print("x");
+                      changeColor1();
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: const Text('Enviar correo'),
                         ),
                       );
-                  }, icon: Icon(Icons.mail), iconSize: 64),
+                  }, icon: Icon(Icons.mail), iconSize: 64, color: c1),
                   Text('Correo')
                 ],
               ),
               Column(
                 children: [
                   IconButton(onPressed: (){
+                      changeColor2();
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: const Text('Hacer llamada'),
                         ),
                       );
-                  }, icon: Icon(Icons.call), iconSize: 64),
+                  }, icon: Icon(Icons.call), iconSize: 64, color: c2),
                   Text('Llamada')
                 ],
               ),
               Column(
                 children: [
                   IconButton(onPressed: (){
-                      // c = changeColor();
+                      changeColor3();
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: const Text('Ir al ITESO'),
                         ),
                       );
-                  }, icon: Icon(Icons.directions), iconSize: 64),
+                  }, icon: Icon(Icons.directions), iconSize: 64, color: c3),
                   Text('Ruta')
                 ],
               ),
